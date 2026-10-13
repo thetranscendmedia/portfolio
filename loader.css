@@ -1,0 +1,304 @@
+    /* ==========================================================================
+   THE TRANSCENDS TECH HUB — LOADER DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  --bg-dark: #07060f;
+  --bg-card: rgba(255, 255, 255, 0.025);
+  
+  --purple-primary: #7b2cbf;
+  --purple-light: #9d4edd;
+  --purple-glow: rgba(123, 44, 191, 0.45);
+  
+  --blue-accent: #00b4d8;
+  --blue-glow: rgba(0, 180, 216, 0.35);
+  
+  --text-primary: #f8f9fa;
+  --text-muted: #a0a5c0;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Particle Canvas --- */
+#loader-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- Ambient Light Orbs --- */
+.ambient-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.glow-top-left {
+  top: -200px;
+  left: -200px;
+  background: radial-gradient(circle, var(--purple-primary), transparent 70%);
+}
+
+.glow-bottom-right {
+  bottom: -200px;
+  right: -200px;
+  background: radial-gradient(circle, var(--blue-accent), transparent 70%);
+}
+
+/* --- Floating Elements Environment --- */
+#floating-elements-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-creative-item {
+  position: absolute;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--purple-light);
+  background: rgba(123, 44, 191, 0.1);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+/* --- Loader Stage Layout --- */
+.loader-stage {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+}
+
+/* --- Top Badge --- */
+.loader-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: 100px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--purple-light);
+  box-shadow: 0 0 10px var(--purple-light);
+  animation: pulseDot 2s infinite;
+}
+
+.badge-text {
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* --- Center Card Container --- */
+.loader-card {
+  width: 100%;
+  max-width: 580px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.loader-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.loader-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.percentage-display {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 30%, var(--purple-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 15px var(--purple-glow));
+  line-height: 1;
+}
+
+/* --- Progress Track & Bar --- */
+.progress-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--purple-primary), var(--purple-light), var(--blue-accent));
+  border-radius: 10px;
+  position: relative;
+  transition: width 0.15s linear;
+  box-shadow: 0 0 20px var(--purple-glow);
+}
+
+.progress-glow-tip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 100%;
+  background: #ffffff;
+  filter: blur(4px);
+  border-radius: 50%;
+}
+
+/* --- Motto Display Section --- */
+.motto-container {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.motto-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.motto-fade-out {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.motto-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Loader Footer --- */
+.loader-footer {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards 0.8s;
+}
+
+.system-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.725rem;
+}
+
+.system-status-indicator::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #00f5d4;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00f5d4;
+}
+
+/* --- Keyframe Animations --- */
+@keyframes fadeInDown {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* --- Responsive Adaptations --- */
+@media (max-width: 640px) {
+  .loader-card { padding: 1.8rem 1.5rem; }
+  .percentage-display { font-size: 2.2rem; }
+  .motto-text { font-size: 0.95rem; }
+}
