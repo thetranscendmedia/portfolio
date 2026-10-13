@@ -7,6 +7,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('bg-canvas');
   const ctx = canvas.getContext('2d');
 
+  const revealElements = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add('is-visible'));
+  }
+
+  const menuButton = document.querySelector('.hamburger-toggle');
+  const navigationMenu = document.getElementById('nav-menu');
+  if (menuButton && navigationMenu) {
+    const setMenuOpen = (isOpen) => {
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      navigationMenu.classList.toggle('is-open', isOpen);
+    };
+
+    menuButton.addEventListener('click', () => {
+      setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+    });
+
+    navigationMenu.addEventListener('click', (event) => {
+      if (event.target.closest('a')) setMenuOpen(false);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.main-header')) setMenuOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        setMenuOpen(false);
+        menuButton.focus();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) setMenuOpen(false);
+    });
+  }
+
   let width = (canvas.width = window.innerWidth);
   let height = (canvas.height = window.innerHeight);
 
@@ -140,4 +189,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 150);
     });
   }
+});
+
+
+
+//Main Hub Script//
+// --- Projects Showcase Filtering Logic ---
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+function applyProjectFilter(filterValue) {
+  filterButtons.forEach((button) => {
+    button.classList.toggle('active', button.getAttribute('data-filter') === filterValue);
+  });
+
+  projectCards.forEach((card) => {
+    const matchesFilter = filterValue === 'all' || card.getAttribute('data-category') === filterValue;
+    card.classList.toggle('hide', !matchesFilter);
+  });
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => applyProjectFilter(button.getAttribute('data-filter')));
+});
+
+document.querySelectorAll('[data-filter-link]').forEach((link) => {
+  link.addEventListener('click', () => applyProjectFilter(link.getAttribute('data-filter-link')));
 });
