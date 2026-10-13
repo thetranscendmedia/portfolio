@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.opacity = '0';
       
       setTimeout(() => {
-        window.location.href = 'index.html'; 
+        window.location.href = 'mainhub.html';
       }, 800);
     }, 1500); 
   }

@@ -175,20 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   animate();
 
-  // Button Click Event Handler
-  const enterBtn = document.getElementById('enter-hub-btn');
-  if (enterBtn) {
-    enterBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      // Smooth Transition Feedback
-      enterBtn.style.transform = 'scale(0.95)';
-      setTimeout(() => {
-        enterBtn.style.transform = 'scale(1)';
-        alert('Welcome to Phase 1. The Transcends Tech Hub portal is ready!');
-      }, 150);
-    });
-  }
 });
 
 
