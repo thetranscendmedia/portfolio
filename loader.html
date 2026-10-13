@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entering The Transcends Tech Hub...</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Shared Unified Stylesheet -->
+  <link rel="stylesheet" href="loader.css">
+</head>
+<body>
+
+  <!-- Dynamic Particle Canvas Background -->
+  <canvas id="loader-canvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
+
+  <!-- Floating Creative Elements Container -->
+  <div id="floating-elements-container"></div>
+
+  <!-- Main Loading Stage -->
+  <main class="loader-stage">
+    
+    <!-- Top Hub Branding Indicator -->
+    <div class="loader-badge">
+      <span class="status-dot"></span>
+      <span class="badge-text">Initializing Secure Portal</span>
+    </div>
+
+    <!-- Center Loading Component -->
+    <div class="loader-card">
+      
+      <!-- Percentage and Status Header -->
+      <div class="loader-header-info">
+        <span class="loader-label">Loading Experience</span>
+        <span id="percentage-counter" class="percentage-display">0%</span>
+      </div>
+
+      <!-- Progress Track & Fill Bar -->
+      <div class="progress-track">
+        <div id="progress-fill" class="progress-fill">
+          <div class="progress-glow-tip"></div>
+        </div>
+      </div>
+
+      <!-- Rotating Creative Motto Section -->
+      <div class="motto-container">
+        <p id="motto-text" class="motto-text">Preparing Creativity...</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom System Status -->
+    <footer class="loader-footer">
+      <span>The Transcends Tech Hub •</span>
+      <span class="system-status-indicator">Sequence Active</span>
+    </footer>
+
+  </main>
+
+  <!-- Loader Script -->
+  <script src="loader.js"></script>
+</body>
+</html>

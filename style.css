@@ -1,13 +1,10 @@
 /* ==========================================================================
-   THE TRANSCENDS TECH HUB — PHASE 1: WELCOME EXPERIENCE
-   Design System: Deep Dark Canvas, Fluid Radial Glows, Kinetic Typography
+   THE TRANSCENDS TECH HUB — HOMEPAGE DESIGN SYSTEM
    ========================================================================== */
 
-/* --- CSS Variables & Design Tokens --- */
 :root {
-  /* Colors */
   --bg-dark: #07060f;
-  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card: rgba(255, 255, 255, 0.025);
   
   --purple-primary: #7b2cbf;
   --purple-light: #9d4edd;
@@ -22,15 +19,12 @@
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-active: rgba(157, 78, 221, 0.4);
 
-  /* Typography */
   --font-heading: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- Base & Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -43,6 +37,7 @@ html, body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
   font-family: var(--font-body);
+
   -webkit-font-smoothing: antialiased;
 }
 
@@ -272,6 +267,7 @@ html {
 .gradient-text {
   background: linear-gradient(135deg, #ffffff 0%, var(--purple-light) 60%, var(--blue-accent) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 25px var(--purple-glow));
 }
@@ -401,37 +397,22 @@ html {
 
 /* --- Animations --- */
 @keyframes fadeInDown {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 @keyframes pulseDot {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scale(0.85);
-  }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
 }
 
-/* --- Responsive Layout Adjustments --- */
 @media (max-width: 768px) {
   .page-container {
     padding: 1.5rem 1.5rem;
@@ -493,8 +474,8 @@ html {
   }
 
   .btn-primary {
-    padding: 0.88rem 1.8rem;
-    font-size: 0.92rem;
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
   }
 }
 
