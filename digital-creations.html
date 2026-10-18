@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore digital creations by The Transcends, including website design, development, UI/UX, and interactive tools.">
-  <title>Digital Creations | The Transcends Tech Hub</title>
+  <meta name="description" content="Explore six websites designed and developed by The Transcends, with responsive desktop and mobile previews.">
+  <title>Digital Work | The Transcends Tech Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -36,42 +36,112 @@
     </header>
 
     <main class="category-page">
-      <section class="category-hero reveal" aria-labelledby="category-title">
+      <section class="category-hero digital-hero reveal" aria-labelledby="category-title">
         <div class="category-hero-layout">
           <div class="category-hero-copy">
             <div class="badge-container">
               <span class="status-dot"></span>
-              <span class="badge-text">The Transcends / Digital</span>
+              <span class="badge-text">The Transcends / Selected digital work</span>
             </div>
-            <h1 class="category-hero-title" id="category-title">Digital <span class="gradient-text">Creations</span></h1>
-            <p class="category-hero-description">Websites, product interfaces, and interactive tools designed to make complex things feel clear and useful.</p>
-            <a class="btn-primary category-hero-cta" href="mainhub.html#contact">Discuss a digital project</a>
+            <h1 class="category-hero-title" id="category-title">Websites with <span class="gradient-text">purpose.</span></h1>
+            <p class="category-hero-description">A collection of digital experiences built for brands, communities, and modern teams. Explore each project at desktop and mobile sizes.</p>
+            <a class="btn-primary category-hero-cta" href="#digital-projects">Explore the projects</a>
           </div>
-          <figure class="category-hero-media">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="A laptop and workspace used for digital design and development" fetchpriority="high" decoding="async">
+          <figure class="category-hero-media digital-hero-media">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Laptop displaying a web development workspace" fetchpriority="high" decoding="async">
           </figure>
         </div>
       </section>
 
-      <section class="category-work" aria-labelledby="category-work-title">
+      <section class="category-work digital-work" id="digital-projects" aria-labelledby="category-work-title">
         <header class="section-heading reveal">
           <span class="section-eyebrow">Selected work</span>
-          <h2 class="section-title" id="category-work-title">Digital project placeholders</h2>
-          <p class="section-intro">Replace these samples with approved project screenshots, titles, and summaries.</p>
+          <h2 class="section-title" id="category-work-title">Built for the real world.</h2>
+          <p class="section-intro">From a community-first nonprofit to a focused team workspace, each site pairs a clear purpose with a responsive experience.</p>
         </header>
         <div class="projects-grid">
-          <article class="project-card reveal tilt-card">
-            <div class="project-image-wrapper"><div class="project-placeholder-digital"><span>Digital image placeholder</span></div></div>
+          <article class="project-card digital-project-card reveal" id="asteriq">
+              <div class="project-preview-pair" aria-label="ASTERIQ desktop and mobile website previews">
+              <div class="project-preview desktop-preview">
+                <iframe src="https://asteriq-nine.vercel.app/" title="ASTERIQ desktop website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+              </div>
+              <div class="project-preview mobile-preview">
+                <div class="phone-preview-frame">
+                  <iframe src="https://asteriq-nine.vercel.app/" title="ASTERIQ mobile website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+                </div>
+              </div>
+            </div>
             <div class="project-info">
-              <h3>Digital Project Placeholder 01</h3>
-              <p>Add an approved project summary, technologies, and the role The Transcends played.</p>
+              <div class="project-title-line"><span class="project-number">01</span><h3>ASTERIQ</h3></div>
+              <p>A unified workspace concept that brings team projects, tasks, conversations, and workflows into one focused product experience.</p>
+              <p class="project-feature"><span>Standout feature</span> Light and dark themes, interactive product views, and workspace analytics.</p>
+              <ul class="project-stack" aria-label="Technology stack"><li>React</li><li>JavaScript</li><li>CSS</li></ul>
+              <div class="project-footer"><span class="project-role">The Transcends · Design &amp; development</span><a class="project-live-link" href="https://asteriq-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Visit live site <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
-          <article class="project-card reveal reveal-delay-1 tilt-card">
-            <div class="project-image-wrapper"><div class="project-placeholder-digital"><span>Digital image placeholder</span></div></div>
+          <article class="project-card digital-project-card reveal" id="transit-one">
+            <div class="project-preview-pair" aria-label="Transit One desktop and mobile website previews">
+              <div class="project-preview desktop-preview"><iframe src="https://transit-one-rust.vercel.app/" title="Transit One desktop website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+              <div class="project-preview mobile-preview"><div class="phone-preview-frame"><iframe src="https://transit-one-rust.vercel.app/" title="Transit One mobile website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div></div>
+            </div>
             <div class="project-info">
-              <h3>Digital Project Placeholder 02</h3>
-              <p>Add an approved project summary, technologies, and the role The Transcends played.</p>
+              <div class="project-title-line"><span class="project-number">02</span><h3>Transit One</h3></div>
+              <p>A modern logistics platform concept presenting global freight services, fleet capabilities, and shipment tracking in one place.</p>
+              <p class="project-feature"><span>Standout feature</span> Shipment tracking entry point and an interactive, filterable fleet showcase.</p>
+              <ul class="project-stack" aria-label="Technology stack"><li>React</li><li>JavaScript</li><li>CSS</li></ul>
+              <div class="project-footer"><span class="project-role">The Transcends · Design &amp; development</span><a class="project-live-link" href="https://transit-one-rust.vercel.app/" target="_blank" rel="noopener noreferrer">Visit live site <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="project-card digital-project-card reveal" id="uplift">
+            <div class="project-preview-pair" aria-label="Uplift desktop and mobile website previews">
+              <div class="project-preview desktop-preview"><iframe src="https://uplift-kohl.vercel.app/" title="Uplift desktop website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+              <div class="project-preview mobile-preview"><div class="phone-preview-frame"><iframe src="https://uplift-kohl.vercel.app/" title="Uplift mobile website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-title-line"><span class="project-number">03</span><h3>Uplift</h3></div>
+              <p>A community nonprofit website bringing education programs, outreach, events, and volunteer opportunities together.</p>
+              <p class="project-feature"><span>Standout feature</span> Clear paths to explore programs, understand impact, and get involved.</p>
+              <ul class="project-stack" aria-label="Technology stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project-footer"><span class="project-role">The Transcends · Design &amp; development</span><a class="project-live-link" href="https://uplift-kohl.vercel.app/" target="_blank" rel="noopener noreferrer">Visit live site <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="project-card digital-project-card reveal" id="north-wears">
+            <div class="project-preview-pair" aria-label="North Wears desktop and mobile website previews">
+              <div class="project-preview desktop-preview"><iframe src="https://north-wears.vercel.app/" title="North Wears desktop website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+              <div class="project-preview mobile-preview"><div class="phone-preview-frame"><iframe src="https://north-wears.vercel.app/" title="North Wears mobile website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-title-line"><span class="project-number">04</span><h3>North Wears</h3></div>
+              <p>A fashion storefront concept designed to give a clothing brand a distinctive digital home and a direct path to its collection.</p>
+              <p class="project-feature"><span>Standout feature</span> A bold brand-led storefront with product discovery at its center.</p>
+              <ul class="project-stack" aria-label="Technology stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project-footer"><span class="project-role">The Transcends · Design &amp; development</span><a class="project-live-link" href="https://north-wears.vercel.app/" target="_blank" rel="noopener noreferrer">Visit live site <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="project-card digital-project-card reveal" id="krove">
+            <div class="project-preview-pair" aria-label="Krove desktop and mobile website previews">
+              <div class="project-preview desktop-preview"><iframe src="https://krove.vercel.app/" title="Krove desktop website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+              <div class="project-preview mobile-preview"><div class="phone-preview-frame"><iframe src="https://krove.vercel.app/" title="Krove mobile website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-title-line"><span class="project-number">05</span><h3>Krove</h3></div>
+              <p>A grooming lounge website showcasing barber services and setting an elevated tone for the in-person experience.</p>
+              <p class="project-feature"><span>Standout feature</span> Service packages, transparent pricing, and clear booking calls to action.</p>
+              <ul class="project-stack" aria-label="Technology stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project-footer"><span class="project-role">The Transcends · Design &amp; development</span><a class="project-live-link" href="https://krove.vercel.app/" target="_blank" rel="noopener noreferrer">Visit live site <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="project-card digital-project-card reveal" id="johnnytunes">
+            <div class="project-preview-pair" aria-label="JohnnyTunes desktop and mobile website previews">
+              <div class="project-preview desktop-preview"><iframe src="https://johnnytunes.vercel.app/" title="JohnnyTunes desktop website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+              <div class="project-preview mobile-preview"><div class="phone-preview-frame"><iframe src="https://johnnytunes.vercel.app/" title="JohnnyTunes mobile website preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-title-line"><span class="project-number">06</span><h3>JohnnyTunes</h3></div>
+              <p>An artist website bringing music releases, artist storytelling, tour dates, and booking details into one destination.</p>
+              <p class="project-feature"><span>Standout feature</span> Direct paths to new releases, streaming platforms, and live dates.</p>
+              <ul class="project-stack" aria-label="Technology stack"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="project-footer"><span class="project-role">The Transcends · Design &amp; development</span><a class="project-live-link" href="https://johnnytunes.vercel.app/" target="_blank" rel="noopener noreferrer">Visit live site <span aria-hidden="true">↗</span></a></div>
             </div>
           </article>
         </div>

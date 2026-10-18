@@ -376,16 +376,16 @@ html {
 
 @media (hover: hover) {
   .tilt-card:hover {
-    transform: perspective(900px) rotateX(3deg) rotateY(-4deg) translateY(-6px) scale(1.01);
+    transform: perspective(1200px) rotateX(3deg) rotateY(-4deg) translateY(-8px) scale(1.01);
   }
 
   .pathway-card:hover .card-icon-wrapper {
-    transform: translateY(-3px) rotate(-4deg);
+    transform: translateY(-3px) rotate(-4deg) translateZ(30px);
   }
 
   .project-card:hover .project-placeholder-visual,
   .project-card:hover .project-placeholder-digital {
-    transform: scale(1.04);
+    transform: scale(1.04) translateZ(18px);
   }
 }
 
