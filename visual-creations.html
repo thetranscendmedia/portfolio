@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore visual creations by The Transcends, from photography and cinematography to graphic and motion design.">
+  <meta name="description" content="Explore photography, event coverage, birthday video shoots, and edited films by The Transcends.">
   <title>Visual Creations | The Transcends Tech Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="mainhub.css">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="general-styles.css">
+  <link rel="stylesheet" href="visual-creations.css">
 </head>
 <body>
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
@@ -20,12 +20,13 @@
     <header class="main-header">
       <a href="mainhub.html#main-hub" class="brand-logo">
         <span class="logo-mark" aria-hidden="true">❖</span>
-        <span class="logo-text">The Transcends</span>
+        <span class="logo-wordmark"><span class="logo-prefix">THE</span><span class="logo-text">TRANSCENDS</span></span>
       </a>
       <nav class="nav-links" id="nav-menu" aria-label="Main navigation">
         <a href="mainhub.html#main-hub" class="nav-item">Overview</a>
+        <a href="#photography" class="nav-item">Photography</a>
+        <a href="#video-editing" class="nav-item">Video</a>
         <a href="digital-creations.html" class="nav-item">Digital</a>
-        <a href="mainhub.html#projects-showcase" class="nav-item">Featured Work</a>
         <a href="mainhub.html#contact" class="nav-item">Contact</a>
       </nav>
       <button class="hamburger-toggle" id="hamburger-btn" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
@@ -36,45 +37,211 @@
     </header>
 
     <main class="category-page">
-      <section class="category-hero reveal" aria-labelledby="category-title">
+      <section class="category-hero visual-hero reveal" aria-labelledby="category-title">
         <div class="category-hero-layout">
           <div class="category-hero-copy">
             <div class="badge-container">
               <span class="status-dot"></span>
-              <span class="badge-text">The Transcends / Visual</span>
+              <span class="badge-text">The Transcends / Visual storytelling</span>
             </div>
-            <h1 class="category-hero-title" id="category-title">Visual <span class="gradient-text">Creations</span></h1>
-            <p class="category-hero-description">Photography, cinematography, video, graphic design, retouching, and motion work shaped to tell a clear story.</p>
-            <a class="btn-primary category-hero-cta" href="mainhub.html#contact">Discuss a visual project</a>
+            <h1 class="category-hero-title" id="category-title">Stories, seen <span class="gradient-text">and felt.</span></h1>
+            <p class="category-hero-description">A home for photographs we have captured and videos we have shaped in the edit. Browse the stills, relive the moments, and see how each project comes together.</p>
+            <div class="visual-hero-actions">
+              <a class="btn-primary category-hero-cta" href="#photography">Explore photography</a>
+              <a class="visual-secondary-cta" href="#video-editing">
+                <span class="visual-secondary-icon" aria-hidden="true">▶</span>
+                <span>Explore video edits</span>
+                <span class="visual-secondary-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
-          <figure class="category-hero-media">
-            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="A photographer capturing a mountain landscape at sunrise" fetchpriority="high" decoding="async">
+          <figure class="visual-hero-art" aria-label="Visual storytelling artwork representing photography and film">
+            <div class="visual-hero-frame visual-hero-frame-back" aria-hidden="true"></div>
+            <div class="visual-hero-frame visual-hero-frame-front">
+              <span class="visual-art-index">THE TRANSCENDS <span>·</span> VISUAL STORIES</span>
+              <div class="visual-art-scene" aria-hidden="true">
+                <span class="visual-art-sun"></span>
+                <span class="visual-art-horizon visual-art-horizon-back"></span>
+                <span class="visual-art-horizon visual-art-horizon-front"></span>
+                <span class="visual-art-frame-mark"></span>
+              </div>
+              <div class="visual-art-caption">
+                <span>Photography <span aria-hidden="true">+</span> Film</span>
+                <strong>Moments<br>in motion.</strong>
+                <small>Made to be remembered.</small>
+              </div>
+            </div>
+            <figcaption class="visual-hero-note">Stories worth seeing. Moments worth feeling again.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="category-work" aria-labelledby="category-work-title">
-        <header class="section-heading reveal">
-          <span class="section-eyebrow">Selected work</span>
-          <h2 class="section-title" id="category-work-title">Visual project placeholders</h2>
-          <p class="section-intro">Replace these samples with approved project images, titles, and summaries.</p>
+      <section class="visual-work-section photo-section" id="photography" aria-labelledby="photography-title">
+        <header class="visual-section-heading reveal">
+          <div>
+            <span class="section-eyebrow">Behind the lens</span>
+            <h2 class="section-title" id="photography-title">Photography <span class="gradient-text">&amp; stills</span></h2>
+          </div>
+          <p class="section-intro">Portraits, events, products, and the in-between moments. Each tile is a ready-to-fill project slot for a photograph from your collection.</p>
         </header>
-        <div class="projects-grid">
-          <article class="project-card reveal tilt-card">
-            <div class="project-image-wrapper"><div class="project-placeholder-visual"><span>Visual image placeholder</span></div></div>
-            <div class="project-info">
-              <h3>Visual Project Placeholder 01</h3>
-              <p>Add an approved project summary and the role The Transcends played.</p>
+
+        <div class="photo-grid">
+          <article class="photo-card photo-card-tall reveal">
+            <div class="photo-placeholder photo-placeholder-portrait" role="img" aria-label="Photo placeholder: add a portrait photograph">
+              <span class="photo-placeholder-icon" aria-hidden="true">✳</span>
+              <span class="photo-placeholder-label">Add portrait photo</span>
+              <span class="photo-placeholder-path">assets/visual/photos/portrait-01.jpg</span>
+            </div>
+            <div class="photo-card-caption">
+              <div><span class="visual-project-type">Photography · Portrait</span><h3>Portrait session title</h3></div>
+              <span class="visual-project-number">PHOTO 01</span>
+              <p>Person or client name · Location · Month, year</p>
             </div>
           </article>
-          <article class="project-card reveal reveal-delay-1 tilt-card">
-            <div class="project-image-wrapper"><div class="project-placeholder-visual"><span>Visual image placeholder</span></div></div>
-            <div class="project-info">
-              <h3>Visual Project Placeholder 02</h3>
-              <p>Add an approved project summary and the role The Transcends played.</p>
+
+          <article class="photo-card photo-card-wide reveal reveal-delay-1">
+            <div class="photo-placeholder photo-placeholder-landscape" role="img" aria-label="Photo placeholder: add an event photograph">
+              <span class="photo-placeholder-icon" aria-hidden="true">✳</span>
+              <span class="photo-placeholder-label">Add event photograph</span>
+              <span class="photo-placeholder-path">assets/visual/photos/event-01.jpg</span>
+            </div>
+            <div class="photo-card-caption">
+              <div><span class="visual-project-type">Photography · Event</span><h3>Event or celebration name</h3></div>
+              <span class="visual-project-number">PHOTO 02</span>
+              <p>Event name · Venue or city · Month, year</p>
+            </div>
+          </article>
+
+          <article class="photo-card reveal">
+            <div class="photo-placeholder photo-placeholder-square" role="img" aria-label="Photo placeholder: add a product photograph">
+              <span class="photo-placeholder-icon" aria-hidden="true">✳</span>
+              <span class="photo-placeholder-label">Add product photo</span>
+              <span class="photo-placeholder-path">assets/visual/photos/product-01.jpg</span>
+            </div>
+            <div class="photo-card-caption">
+              <div><span class="visual-project-type">Photography · Product</span><h3>Product shoot title</h3></div>
+              <span class="visual-project-number">PHOTO 03</span>
+              <p>Brand or client · Studio or location · Month, year</p>
+            </div>
+          </article>
+
+          <article class="photo-card photo-card-wide reveal">
+            <div class="photo-placeholder photo-placeholder-landscape photo-placeholder-warm" role="img" aria-label="Photo placeholder: add a lifestyle or campaign photograph">
+              <span class="photo-placeholder-icon" aria-hidden="true">✳</span>
+              <span class="photo-placeholder-label">Add lifestyle or campaign photo</span>
+              <span class="photo-placeholder-path">assets/visual/photos/campaign-01.jpg</span>
+            </div>
+            <div class="photo-card-caption">
+              <div><span class="visual-project-type">Photography · Lifestyle / campaign</span><h3>Campaign or story title</h3></div>
+              <span class="visual-project-number">PHOTO 04</span>
+              <p>Client or subject · Location · Month, year</p>
+            </div>
+          </article>
+
+          <article class="photo-card reveal reveal-delay-1">
+            <div class="photo-placeholder photo-placeholder-square photo-placeholder-blue" role="img" aria-label="Photo placeholder: add a detail photograph">
+              <span class="photo-placeholder-icon" aria-hidden="true">✳</span>
+              <span class="photo-placeholder-label">Add detail photograph</span>
+              <span class="photo-placeholder-path">assets/visual/photos/details-01.jpg</span>
+            </div>
+            <div class="photo-card-caption">
+              <div><span class="visual-project-type">Photography · Details</span><h3>Detail or editorial title</h3></div>
+              <span class="visual-project-number">PHOTO 05</span>
+              <p>Subject or collection · Location · Month, year</p>
             </div>
           </article>
         </div>
+        <div class="visual-section-action">
+          <a class="btn-primary visual-more-link" href="https://t.me/yourchannel" target="_blank" rel="noopener noreferrer">
+            <span>See more visual works</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="visual-work-section video-section" id="video-editing" aria-labelledby="video-title">
+        <header class="visual-section-heading reveal">
+          <div>
+            <span class="section-eyebrow">Motion, cut with care</span>
+            <h2 class="section-title" id="video-title">Video shoots <span class="gradient-text">&amp; edits</span></h2>
+          </div>
+          <p class="section-intro">Event recaps, birthday highlights, and other films, carefully shaped to bring the moment back to life.</p>
+        </header>
+
+        <div class="video-grid">
+          <article class="video-project-card reveal">
+            <div class="video-placeholder video-placeholder-event" role="img" aria-label="Video preview placeholder for an event recap film">
+              <span class="video-placeholder-kicker">VIDEO PROJECT 01</span>
+              <span class="video-play-mark" aria-hidden="true">▶</span>
+              <span class="video-placeholder-label">Add event recap preview</span>
+              <span class="video-placeholder-path">assets/visual/videos/event-recap-01.mp4</span>
+              <span class="video-format-tag">9:16 · Vertical event recap</span>
+            </div>
+            <div class="video-project-info">
+              <div class="video-title-row"><span class="visual-project-type">Shoot + edit</span><span class="video-duration">Runtime: add duration</span></div>
+              <h3>Event recap film</h3>
+              <p>Capture the atmosphere, key moments, and people that made the event memorable.</p>
+              <dl class="video-project-details">
+                <div><dt>Event / client</dt><dd>Add event or client name</dd></div>
+                <div><dt>Location · date</dt><dd>Add venue or city · Month, year</dd></div>
+                <div><dt>Deliverables</dt><dd>Recap film · Add social cutdowns if supplied</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="video-project-card reveal reveal-delay-1">
+            <div class="video-placeholder video-placeholder-birthday" role="img" aria-label="Video preview placeholder for a birthday shoot and highlight edit">
+              <span class="video-placeholder-kicker">VIDEO PROJECT 02</span>
+              <span class="video-play-mark" aria-hidden="true">▶</span>
+              <span class="video-placeholder-label">Add birthday film preview</span>
+              <span class="video-placeholder-path">assets/visual/videos/birthday-highlight-01.mp4</span>
+              <span class="video-format-tag">9:16 · Birthday highlight</span>
+            </div>
+            <div class="video-project-info">
+              <div class="video-title-row"><span class="visual-project-type">Birthday shoot + edit</span><span class="video-duration">Runtime: add duration</span></div>
+              <h3>Birthday highlight film</h3>
+              <p>A personal highlight edit that brings together the celebration, reactions, and standout moments.</p>
+              <dl class="video-project-details">
+                <div><dt>Celebrant / client</dt><dd>Add approved name or client</dd></div>
+                <div><dt>Location · date</dt><dd>Add venue or city · Month, year</dd></div>
+                <div><dt>Deliverables</dt><dd>Highlight film · Add vertical cut if supplied</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="video-project-card reveal">
+            <div class="video-placeholder video-placeholder-film" role="img" aria-label="Video preview placeholder for an additional video edit">
+              <span class="video-placeholder-kicker">VIDEO PROJECT 03</span>
+              <span class="video-play-mark" aria-hidden="true">▶</span>
+              <span class="video-placeholder-label">Add another edited film</span>
+              <span class="video-placeholder-path">assets/visual/videos/project-film-01.mp4</span>
+              <span class="video-format-tag">9:16 · Edited film</span>
+            </div>
+            <div class="video-project-info">
+              <div class="video-title-row"><span class="visual-project-type">Add shoot / edit type</span><span class="video-duration">Runtime: add duration</span></div>
+              <h3>Add project or film title</h3>
+              <p>Summarise the brief, the story being told, and the approach taken in the edit.</p>
+              <dl class="video-project-details">
+                <div><dt>Client / subject</dt><dd>Add approved name or client</dd></div>
+                <div><dt>Location · date</dt><dd>Add venue or city · Month, year</dd></div>
+                <div><dt>Deliverables</dt><dd>Add final formats and versions supplied</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+        <div class="visual-section-action">
+          <a class="btn-primary visual-more-link" href="https://t.me/yourchannel" target="_blank" rel="noopener noreferrer">
+            <span>See more visual works</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="visual-closing reveal" aria-labelledby="visual-closing-title">
+        <span class="section-eyebrow">Make it memorable</span>
+        <h2 id="visual-closing-title">Every moment has a story worth keeping.</h2>
+        <p>From a single frame to a celebration brought to life on screen, we create visual work that lets you return to the feeling.</p>
+        <a class="visual-text-link" href="mainhub.html#contact">Have a project in mind? <span aria-hidden="true">→</span></a>
       </section>
     </main>
 
@@ -85,6 +252,7 @@
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="general.js"></script>
+  <script src="visual-creations.js"></script>
 </body>
 </html>

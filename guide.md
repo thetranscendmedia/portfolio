@@ -91,8 +91,8 @@ keyboard focus, and ensure every interaction works on touchscreens.
 5. Technical requirements
 • Core stack: semantic HTML5, modern CSS3, and vanilla JavaScript.
 • Do not introduce React, Vue, or another framework unless the project owner explicitly changes the stack.
-• Organise the project into clear files, for example index.html, styles.css, and script.js; use separate assets folders
-for images, video, icons, and fonts.
+• Keep one HTML, CSS, and JavaScript entry file per page, alongside shared general-styles.css and general.js files.
+Use separate assets folders for images, video, icons, and fonts.
 • Use reusable CSS classes and CSS variables for the colour palette, spacing, typography, and motion.
 • Make the website responsive across mobile, tablet, laptop, and large desktop screens.
 • Optimise images and video; lazy-load below-the-fold media and avoid unnecessarily large assets.

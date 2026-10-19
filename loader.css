@@ -2,42 +2,8 @@
    THE TRANSCENDS TECH HUB — LOADER DESIGN SYSTEM
    ========================================================================== */
 
-:root {
-  --bg-dark: #07060f;
-  --bg-card: rgba(255, 255, 255, 0.025);
-  
-  --purple-primary: #7b2cbf;
-  --purple-light: #9d4edd;
-  --purple-glow: rgba(123, 44, 191, 0.45);
-  
-  --blue-accent: #00b4d8;
-  --blue-glow: rgba(0, 180, 216, 0.35);
-  
-  --text-primary: #f8f9fa;
-  --text-muted: #a0a5c0;
-  
-  --border-subtle: rgba(255, 255, 255, 0.08);
-
-  --font-heading: 'Syne', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  font-family: var(--font-body);
+body {
   overflow: hidden;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* --- Particle Canvas --- */
@@ -49,30 +15,6 @@ html, body {
   height: 100%;
   z-index: 1;
   pointer-events: none;
-}
-
-/* --- Ambient Light Orbs --- */
-.ambient-glow {
-  position: fixed;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  filter: blur(140px);
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.6;
-}
-
-.glow-top-left {
-  top: -200px;
-  left: -200px;
-  background: radial-gradient(circle, var(--purple-primary), transparent 70%);
-}
-
-.glow-bottom-right {
-  bottom: -200px;
-  right: -200px;
-  background: radial-gradient(circle, var(--blue-accent), transparent 70%);
 }
 
 /* --- Floating Elements Environment --- */
@@ -126,23 +68,6 @@ html, body {
   backdrop-filter: blur(12px);
   opacity: 0;
   animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--purple-light);
-  box-shadow: 0 0 10px var(--purple-light);
-  animation: pulseDot 2s infinite;
-}
-
-.badge-text {
-  font-size: 0.825rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  font-weight: 600;
 }
 
 /* --- Center Card Container --- */
@@ -276,24 +201,6 @@ html, body {
   background-color: #00f5d4;
   border-radius: 50%;
   box-shadow: 0 0 8px #00f5d4;
-}
-
-/* --- Keyframe Animations --- */
-@keyframes fadeInDown {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-@keyframes pulseDot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
 }
 
 /* --- Responsive Adaptations --- */

@@ -3,6 +3,8 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.dataset.page = 'loader';
+
   const canvas = document.getElementById('loader-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
