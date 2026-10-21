@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Transcends Tech Hub | Main Hub & Portfolio</title>
   
-  <!-- Google Fonts: Syne for futuristic display, Inter for clean body typography -->
+  <!-- Google Fonts: Syne for futuristic display, Inter for body typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   
-  <!-- External CSS Link -->
-  <link rel="stylesheet" href="general-styles.css">
+  <!-- External CSS Links -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mainhub.css">
 </head>
 <body>
@@ -26,40 +26,40 @@
   <!-- Main Page Layout Container -->
   <div class="page-container hub-page-wrapper">
 
-    <!-- Header / Navigation (Independent Hub Header) -->
+    <!-- Header / Navigation -->
     <header class="main-header">
       <a href="index.html" class="brand-logo">
-        <span class="logo-mark" aria-hidden="true">❖</span>
-        <span class="logo-wordmark"><span class="logo-prefix">THE</span><span class="logo-text">TRANSCENDS</span></span>
+        <span class="logo-mark">❖</span>
+        <span class="logo-text">The Transcends</span>
       </a>
 
       <!-- Desktop & Mobile Nav Menu -->
       <nav class="nav-links" id="nav-menu">
         <a href="index.html" class="nav-item">Welcome</a>
         <a href="#main-hub" class="nav-item">Overview</a>
-        <a href="#projects-showcase" class="nav-item">Showcase</a>
         <a href="#capabilities" class="nav-item">Services</a>
+        <a href="#projects-showcase" class="nav-item">Showcase</a>
         <a href="#about" class="nav-item">About</a>
         <a href="#contact" class="nav-item">Contact</a>
       </nav>
 
-      <!-- Modern Morphing Hamburger Toggle Button -->
-      <button class="hamburger-toggle" id="hamburger-btn" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
+      <!-- Hamburger Toggle Button -->
+      <button class="hamburger-toggle" id="hamburger-btn" type="button" aria-label="Open navigation menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
     </header>
 
-    <!-- Main Hub Introduction -->
-    <section id="main-hub" class="hub-hero reveal" aria-labelledby="hub-hero-title">
+    <!-- Main Hub Hero Section -->
+    <section id="main-hub" class="hub-hero animate-on-scroll">
       <div class="hub-hero-layout">
         <div class="hub-hero-content">
           <div class="badge-container">
             <span class="status-dot"></span>
             <span class="badge-text">The Transcends Tech Hub</span>
           </div>
-          <h1 class="hub-hero-title" id="hub-hero-title">
+          <h1 class="hub-hero-title">
             Creative vision.<br><span class="gradient-text">Digital craft.</span>
           </h1>
           <p class="hub-hero-copy">
@@ -67,7 +67,7 @@
           </p>
           <a class="btn-primary hub-hero-cta" href="#capabilities">
             <span>Explore capabilities</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
@@ -77,81 +77,67 @@
         <figure class="hub-hero-media">
           <img
             src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
-            alt="A photographer capturing a mountain landscape at sunrise"
+            alt="Photographer landscape"
             fetchpriority="high"
-            decoding="async"
           >
         </figure>
       </div>
     </section>
 
-    <section id="about" class="about-section" aria-labelledby="about-title">
-      <div class="section-container about-layout">
-        <div class="about-copy reveal">
-          <span class="section-eyebrow">The Transcends / Our Approach</span>
-          <h2 class="section-title" id="about-title">Creative work with <span class="gradient-text">purpose.</span></h2>
-        </div>
-        <div class="about-detail reveal reveal-delay-1">
-          <span class="about-rule" aria-hidden="true"></span>
-          <p>The Transcends brings visual creativity and digital innovation together to make ideas clear, compelling, and useful.</p>
-          <p>From a single image to a complete web experience, the focus stays on thoughtful craft, purposeful design, and the people on the other side of the screen.</p>
-        </div>
-      </div>
-
-      <div class="section-container team-block">
-        <header class="team-heading reveal">
-          <span class="section-eyebrow">The people behind the work</span>
-          <h3 class="section-title" id="team-title">Meet the <span class="gradient-text">Team</span></h3>
-          <p class="section-intro">Profiles will be added when names, roles, and approved portraits are ready.</p>
-        </header>
-
-        <div class="team-grid" aria-labelledby="team-title">
-          <article class="team-card reveal">
-            <div class="team-portrait"><span>Portrait pending</span></div>
-            <div class="team-card-info">
-              <span class="team-card-role">Role to be confirmed</span>
-              <h4>Name to be added</h4>
-            </div>
-          </article>
-          <article class="team-card reveal reveal-delay-1">
-            <div class="team-portrait"><span>Portrait pending</span></div>
-            <div class="team-card-info">
-              <span class="team-card-role">Role to be confirmed</span>
-              <h4>Name to be added</h4>
-            </div>
-          </article>
-          <article class="team-card reveal reveal-delay-2">
-            <div class="team-portrait"><span>Portrait pending</span></div>
-            <div class="team-card-info">
-              <span class="team-card-role">Role to be confirmed</span>
-              <h4>Name to be added</h4>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Hub Section: Dual Pathways -->
-    <section id="capabilities" class="hub-section" aria-labelledby="capabilities-title">
+    <!-- Interactive AI Projection Section (Services) -->
+    <section id="capabilities" class="hub-section animate-on-scroll">
       <div class="hub-container">
         
-        <div class="hub-header reveal">
+        <div class="hub-header">
           <div class="badge-container">
             <span class="status-dot"></span>
-            <span class="badge-text">Visual + Digital</span>
+            <span class="badge-text">Visual + Digital Protocols</span>
           </div>
-            <h2 class="hub-title" id="capabilities-title">What Are You <span class="gradient-text">Looking For?</span></h2>
+          <h2 class="hub-title">What Are You <span class="gradient-text">Looking For?</span></h2>
           <p class="hub-subtitle">
-              Visual storytelling and digital experiences, shaped with care from first idea to final detail. <br>
-              Choose your path into The Transcends Tech Hub
+            Visual storytelling and digital experiences, projected through our HUB AI holographic terminal interface.
           </p>
         </div>
 
-        <div class="pathways-grid">
+        <!-- Animated AI Presenter Terminal -->
+        <div class="ai-presenter-node">
+          <div class="ai-avatar-core">
+            <div class="ai-core-ring"></div>
+            <div class="ai-core-ring inner"></div>
+            <span class="ai-avatar-symbol">❖</span>
+          </div>
+          
+          <div class="ai-dialogue-terminal">
+            <div class="ai-status-header">
+              <span class="ai-live-tag">HUB AI V1.0 • ONLINE</span>
+              <span class="ai-mode-tag" id="ai-status-text">PROJECTOR STANDBY</span>
+            </div>
+            <p class="ai-message" id="ai-typewriter-text">
+              "Tap to project service panels."
+            </p>
+          </div>
+
+          <button class="ai-projection-trigger" id="projector-btn">
+            <span class="beam-icon">⚡</span>
+            <span>View Services</span>
+          </button>
+        </div>
+
+        <!-- Whiz-Watch Glowing Hologram Projector Source Node -->
+        <div class="whiz-watch-source-container">
+          <div class="holo-emitter-lens" id="emitter-lens">
+            <div class="lens-core-glow"></div>
+            <div class="lens-ring"></div>
+          </div>
+          <div class="projector-laser-beam" id="laser-beam"></div>
+        </div>
+
+        <!-- Holographic 60% Opacity Sub-Panels (Projected Area) -->
+        <div class="pathways-grid" id="hologram-stage">
           
           <!-- Pathway A: Visual Creations -->
-          <a href="visual-creations.html" class="pathway-card visual-card reveal tilt-card">
-            <div class="card-glow"></div>
+          <a href="visual-creations.html" class="pathway-card visual-card">
+            <div class="holo-glitch-line"></div>
             <div class="card-content">
               <div class="card-icon-wrapper">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -175,8 +161,8 @@
           </a>
 
           <!-- Pathway B: Digital Creations -->
-          <a href="digital-creations.html" class="pathway-card digital-card reveal reveal-delay-1 tilt-card">
-            <div class="card-glow"></div>
+          <a href="digital-creations.html" class="pathway-card digital-card">
+            <div class="holo-glitch-line"></div>
             <div class="card-content">
               <div class="card-icon-wrapper">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -204,11 +190,11 @@
       </div>
     </section>
 
-    <!-- Featured Projects Showcase Section -->
-    <section id="projects-showcase" class="showcase-section">
+    <!-- Projects Showcase Section -->
+    <section id="projects-showcase" class="showcase-section animate-on-scroll">
       <div class="showcase-container">
         
-        <div class="showcase-header reveal">
+        <div class="showcase-header">
           <div class="badge-container">
             <span class="status-dot"></span>
             <span class="badge-text">Selected Works</span>
@@ -226,134 +212,71 @@
         </div>
 
         <div class="projects-grid">
-          <div class="project-card reveal tilt-card" data-category="visual">
-            <div class="project-image-wrapper">
-              <div class="project-placeholder-visual"><span>Visual image placeholder</span></div>
-              <span class="project-category-tag">Visual Creation</span>
-            </div>
+          <div class="project-card" data-category="visual">
+            <div class="project-image-wrapper"><span>Visual Creation Placeholder</span></div>
             <div class="project-info">
-              <h3>Visual Project Placeholder 01</h3>
-              <p>Replace with an approved project title, real visual, and short description.</p>
-              <div class="project-footer"><span class="project-date">Placeholder</span><span class="project-link-text">Details pending</span></div>
+              <h3>Visual Creation 01</h3>
+              <p>Approved project title and description pending.</p>
             </div>
           </div>
 
-          <div class="project-card reveal reveal-delay-1 tilt-card" data-category="digital">
-            <div class="project-image-wrapper">
-              <div class="project-placeholder-digital"><span>Digital image placeholder</span></div>
-              <span class="project-category-tag">Digital Creation</span>
-            </div>
+          <div class="project-card" data-category="digital">
+            <div class="project-image-wrapper"><span>Digital Creation Placeholder</span></div>
             <div class="project-info">
-              <h3>Digital Project Placeholder 01</h3>
-              <p>Replace with an approved project title, real interface image, and short description.</p>
-              <div class="project-footer"><span class="project-date">Placeholder</span><span class="project-link-text">Details pending</span></div>
+              <h3>Digital Creation 01</h3>
+              <p>Approved interface preview pending.</p>
             </div>
           </div>
-
-          <div class="project-card reveal reveal-delay-2 tilt-card" data-category="visual">
-            <div class="project-image-wrapper">
-              <div class="project-placeholder-visual"><span>Visual image placeholder</span></div>
-              <span class="project-category-tag">Visual Creation</span>
-            </div>
-            <div class="project-info">
-              <h3>Visual Project Placeholder 02</h3>
-              <p>Replace with an approved project title, real visual, and short description.</p>
-              <div class="project-footer"><span class="project-date">Placeholder</span><span class="project-link-text">Details pending</span></div>
-            </div>
-          </div>
-
-          <div class="project-card reveal tilt-card" data-category="digital">
-            <div class="project-image-wrapper">
-              <div class="project-placeholder-digital"><span>Digital image placeholder</span></div>
-              <span class="project-category-tag">Digital Creation</span>
-            </div>
-            <div class="project-info">
-              <h3>Digital Project Placeholder 02</h3>
-              <p>Replace with an approved project title, real interface image, and short description.</p>
-              <div class="project-footer"><span class="project-date">Placeholder</span><span class="project-link-text">Details pending</span></div>
-            </div>
-          </div>
-
         </div>
 
       </div>
     </section>
 
-    <section id="contact" class="contact-section" aria-labelledby="contact-title">
-      <div class="section-container contact-layout">
-        <div class="contact-copy reveal">
-          <span class="section-eyebrow">Contact</span>
-          <h2 class="section-title" id="contact-title">Have an idea taking shape?</h2>
-          <p class="section-intro">Tell us what you are working on. Reach out through your preferred channel.</p>
+    <!-- About Section -->
+    <section id="about" class="about-section animate-on-scroll">
+      <div class="section-container about-layout">
+        <div class="about-copy">
+          <span class="section-eyebrow">Our Approach</span>
+          <h2 class="section-title">Creative work with <span class="gradient-text">purpose.</span></h2>
         </div>
-        <div class="contact-grid reveal reveal-delay-1" aria-label="Contact links">
+        <div class="about-detail">
+          <p>The Transcends brings visual creativity and digital innovation together to make ideas clear, compelling, and useful.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section animate-on-scroll">
+      <div class="section-container contact-layout">
+        <div class="contact-copy">
+          <span class="section-eyebrow">Contact</span>
+          <h2 class="section-title">Have an idea taking shape?</h2>
+          <p class="section-intro">Reach out through your preferred channel.</p>
+        </div>
+        <div class="contact-grid">
           <a class="contact-channel" href="mailto:hello@example.com">
             <span class="contact-channel-type">Email</span>
             <span class="contact-channel-value">hello@example.com</span>
-            <span class="contact-channel-note">Replace with verified email</span>
           </a>
-          <a class="contact-channel" href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">
-            <span class="contact-channel-type">Instagram</span>
-            <span class="contact-channel-value">@yourusername</span>
-            <span class="contact-channel-note">Replace with profile handle</span>
-          </a>
-          <a class="contact-channel" href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer">
-            <span class="contact-channel-type">TikTok</span>
-            <span class="contact-channel-value">@yourusername</span>
-            <span class="contact-channel-note">Replace with profile handle</span>
-          </a>
-          <a class="contact-channel" href="https://wa.me/15555550199" target="_blank" rel="noopener noreferrer">
+          <a class="contact-channel" href="https://wa.me/15555550199" target="_blank" rel="noopener">
             <span class="contact-channel-type">WhatsApp</span>
             <span class="contact-channel-value">+1 (555) 555-0199</span>
-            <span class="contact-channel-note">Replace with verified number</span>
           </a>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="main-footer hub-footer">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <a href="#main-hub" class="footer-brand-link">
-            <span class="logo-mark" aria-hidden="true">❖</span>
-            <span class="logo-wordmark"><span class="logo-prefix">THE</span><span class="logo-text">TRANSCENDS</span></span>
-          </a>
-          <p>Bringing creativity to life through visual excellence and digital innovation.</p>
-        </div>
-
-        <nav class="footer-column" aria-label="Footer navigation">
-          <h2 class="footer-heading">Explore</h2>
-          <a href="#about">About</a>
-          <a href="#capabilities">What We Do</a>
-          <a href="#projects-showcase">Featured Creations</a>
-        </nav>
-
-        <div class="footer-column">
-          <h2 class="footer-heading">Capabilities</h2>
-          <a href="visual-creations.html">Visual Creations</a>
-          <a href="digital-creations.html">Digital Creations</a>
-        </div>
-
-        <div class="footer-contact">
-          <h2 class="footer-heading">Connect</h2>
-          <a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.instagram.com/yourusername/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://wa.me/15555550199" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="mailto:hello@example.com">hello@example.com</a>
-        </div>
-      </div>
-
       <div class="footer-bottom">
         <span>© 2026 The Transcends Tech Hub</span>
-        <a href="#main-hub" class="back-to-top">Back to top <span aria-hidden="true">↑</span></a>
         <span class="status-tag">System Online</span>
       </div>
     </footer>
 
   </div>
 
-  <!-- External JavaScript Link -->
-  <script src="general.js"></script>
+  <!-- JavaScript Link -->
   <script src="mainhub.js"></script>
 </body>
 </html>
