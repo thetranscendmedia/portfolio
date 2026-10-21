@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         projectorBtn.innerHTML = '<span class="beam-icon">✖</span><span>Retract Hologram</span>';
         
-        scrambleText(aiStatus, 'WHIZ-WATCH SECURE STREAM LIVE', 400);
+        scrambleText(aiStatus, 'HOLOGRAM PANELS STREAM LIVE', 400);
         setTimeout(() => {
           typeWriter(aiMessage, '"Holographic matrix stable. Sub-panels projected at 60% opacity. Select your pathway protocol."', 20);
         }, 300);
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         scrambleText(aiStatus, 'PROJECTOR STANDBY', 400);
         setTimeout(() => {
-          typeWriter(aiMessage, '"Whiz-Watch link active. Tap to project holographic service panels."', 20);
+          typeWriter(aiMessage, '"Tap to project holographic service panels."', 20);
         }, 300);
       }
     });
